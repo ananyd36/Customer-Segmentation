@@ -1,0 +1,100 @@
+<html>
+    <title>
+        Customer Segmentation
+    </title>
+    <head>
+        <p>Please Fill out the details to know your Class</p>
+
+        <body>
+            <div class="main">
+            <form action="{{ url_for('predict')}}" method="POST">
+                <label for="gder">Please enter your Gender:</label><br>
+                <input list="gender" name="gender" placeholder="Male of Female" required="required">
+                    <datalist id="gender">
+                        <option value="Male">
+                        <option value="Female">
+                    </datalist>
+                    <br>
+                <label for="marry">Married</label><br>
+                <input list="marry" name="marry" placeholder="Yes or No" required="required">
+                    <datalist id="marry">
+                        <option value="Yes">
+                        <option value="No">
+                    </datalist><br>
+                <label for="age">Your Age</label><br>
+                <input type="text" name="age" id="age" value="" placeholder="in years" required="required"><br>
+                <label for="grad">Are you Graduated</label><br>
+                <input list="grad" name="grad" placeholder="Yes or No" required="required">
+                    <datalist id="grad">
+                        <option value="Yes">
+                        <option value="No">
+                    </datalist><br>
+                <label for="prof">Please Mention your Profession:</label><br>
+                <input list="prof" name="prof" placeholder="Healthcare or Lawyer" required="required"><br>
+                    <datalist id="prof">
+                    <option value="Healthcare">
+                    <option value="Lawyer">
+                    <option value="Engineer">
+                    <option value="Entertainment">
+                    <option value="Artist">
+                    <option value="Executive">
+                    <option value="Doctor">
+                    <option value="Homemaker">
+                    <option value="Marketing">
+                    </datalist><br>
+                <label for="work">Work Experience</label><br>
+                <input type="text" name="work" id="work" value="" placeholder="in years" required="required"><br>
+                <label for="score">Spending Score</label><br>
+                <input list = "score" name="score" placeholder="Low or Average or High" required="required"><br>
+                <datalist id="score">
+                    <option value="Low">
+                    <option value="Average">
+                    <option value="High">
+                    </datalist><br>
+                <label for="fam">Family Size:</label><br>
+                <input type="text" name="fam" id="fam" value="" placeholder="2 or 3 " required="required"><br>
+                <label for="var">Var1:</label><br>
+                <input type="text" name="var" id="var" value="" placeholder="Var1" required="required"><br>
+                <input type="submit">
+            </form>
+            <div>
+                <h1>{{ results }}</h1>
+            </div>
+        </div>
+        </body>
+        <style>
+            body { 
+	background-color: #333; 
+	font-size: 1rem; 
+	font-family: 'Lato';
+} 
+
+h1 {
+    font-size: 2em; 
+    color: whitesmoke; 
+    font-weight: 400; 
+    margin-bottom: 0.5em; 
+    margin-top: 0; }
+
+p{
+    font-size: 2em;
+    text-align: center; 
+    color: whitesmoke; 
+    font-weight: 400; 
+    margin-bottom: 0.5em; 
+    margin-top: 0;
+
+}
+label {
+    color: chocolate;
+    display: inline-block;
+	margin: 0.75em 0;
+	font-weight: bold;
+}
+.main 
+{
+    text-align: center;
+}
+        </style>
+    </head>
+</html>
